@@ -1,0 +1,8 @@
+{
+  "name": "vionae-collection",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "midtrans-client": "^1.3.1"
+  }
+}

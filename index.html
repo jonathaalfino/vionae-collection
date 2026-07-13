@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vionae Collection — Aksesori Premium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- ===================== MIDTRANS SNAP.JS ===================== -->
+<!-- PRODUCTION (transaksi uang asli). -->
+<script
+  src="https://app.midtrans.com/snap/snap.js"
+  data-client-key="Mid-client-Wa3687nd3Z_lZ6Cw">
+</script>
+
+</head>
+<body>
+
+<!-- PROMO BANNER -->
+<div class="promo-banner" id="promoBanner">
+  <div class="promo-banner-inner">
+    <span>✦ Gift Wrapping Premium Gratis untuk pembelian di atas Rp 150.000</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Koleksi Limited Batch Setiap Piece Adalah Karya Eksklusif</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Pengiriman Express 24 Jam Sidoarjo</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Aksesori Premium, Detail yang Menyempurnakan Penampilanmu</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Gift Wrapping Premium Gratis untuk pembelian di atas Rp 150.000</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Koleksi Limited Batch — Setiap Piece Adalah Karya Eksklusif</span>
+    <span class="promo-sep">✦</span>
+    <span>✦ Pengiriman Express 24 Jam Sidoarjo/span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <div class="brand" onclick="showSection('about')" title="Tentang Vionae Collection">
+      <div class="brand-logo">
+        <img src="image/logo.png" alt="Vionae" onerror="this.parentElement.innerHTML='💗'">
+      </div>
+      <div>
+        <div class="brand-name">Vionae Collection</div>
+        <div class="brand-tagline">Aksesori Eksklusif</div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="nav-link active" onclick="showSection('home')">Beranda</a>
+      <a class="nav-link" onclick="showSection('products')">Produk</a>
+      <a class="nav-link" onclick="showSection('services')">Layanan</a>
+      <a class="nav-link" onclick="showSection('testimonials')">Testimoni</a>
+      <a class="nav-link" onclick="showSection('contact')">Kontak</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn-icon" onclick="toggleCart()" title="Keranjang">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="btn-icon" id="hamburger" onclick="toggleMobileNav()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav">
+    <button class="mobile-nav-link" onclick="showSection('home');closeMobileNav()"><i class="fas fa-home"></i> Beranda</button>
+    <button class="mobile-nav-link" onclick="showSection('products');closeMobileNav()"><i class="fas fa-gem"></i> Produk</button>
+    <button class="mobile-nav-link" onclick="showSection('services');closeMobileNav()"><i class="fas fa-gift"></i> Layanan</button>
+    <button class="mobile-nav-link" onclick="showSection('testimonials');closeMobileNav()"><i class="fas fa-star"></i> Testimoni</button>
+    <button class="mobile-nav-link" onclick="showSection('contact');closeMobileNav()"><i class="fas fa-phone"></i> Kontak</button>
+  </div>
+</header>
+
+<main>
+<!-- ==================== HOME ==================== -->
+<div class="section visible" id="sec-home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-floating-1"></div>
+    <div class="hero-floating-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow">✦ Koleksi Limited Batch Eksklusif</div>
+          <h1 class="hero-title">
+            Keanggunan yang <em>Menyempurnakan</em> Setiap Momen
+          </h1>
+          <p class="hero-desc">
+            Vionae Collection hadir sebagai ungkapan keindahan dalam detail kecil aksesori dengan jiwa, dirancang untuk perempuan yang memahami bahwa penampilan terbaik lahir dari pilihan yang tepat.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="showSection('products')">
+              <i class="fas fa-heart"></i> Lihat Katalog
+            </button>
+            <button class="btn-secondary" onclick="showSection('services')">
+              <i class="fas fa-gift"></i> Layanan Kami
+            </button>
+          </div>
+          <div class="hero-pills">
+            <div class="hero-pill"><div class="hero-pill-dot"></div> Gift Wrapping Premium</div>
+            <div class="hero-pill"><div class="hero-pill-dot"></div> Limited Batch Eksklusif</div>
+            <div class="hero-pill"><div class="hero-pill-dot"></div> Express Delivery</div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-main">
+            <img src="image/allon.png" alt="Vionae Collection" onerror="this.src='https://placehold.co/600x400/fce8f1/d4547a?text=Vionae+Collection'">
+          </div>
+          <div class="hero-mini-cards">
+            <div class="hero-mini-card">
+              <div class="icon">💝</div>
+              <div class="label">Gift Wrapping</div>
+            </div>
+            <div class="hero-mini-card">
+              <div class="icon">🤝</div>
+              <div class="label">Personalized Service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO CARDS -->
+  <div class="sec-pad-sm" style="padding-top:0">
+    <div class="container">
+      <div class="promo-cards reveal-stagger">
+        <div class="promo-card">
+          <div class="promo-card-icon">🎁</div>
+          <h3>Gift Wrapping Premium Gratis</h3>
+          <p>Setiap pembelian di atas Rp 150.000 hadir dengan packing kado premium yang dirancang penuh ketelitian.</p>
+        </div>
+        <div class="promo-card">
+          <div class="promo-card-icon">✦</div>
+          <h3>Koleksi Limited & Eksklusif</h3>
+          <p>Setiap batch dirilis dalam jumlah terbatas karena keistimewaan sejati tidak hadir untuk semua orang.</p>
+        </div>
+        <div class="promo-card">
+          <div class="promo-card-icon">⚡</div>
+          <h3>Pengiriman Express 24 Jam</h3>
+          <p>Untuk wilayah Sidoarjo pengiriman express tersedia agar keindahanmu tiba tanpa penundaan.</p>
+        </div>
+        <div class="promo-card">
+          <div class="promo-card-icon">💌</div>
+          <h3>Pesan Personal</h3>
+          <p>Tambahkan kartu ucapan personal untuk menjadikan setiap hadiah lebih bermakna dan terasa dari hati.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <div class="sec-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Pilihan Utama</div>
+        <h2 class="section-title">Koleksi Pilihan Kami</h2>
+        <p class="section-desc">Aksesori terpilih yang paling dicintai karena kesempurnaan memang selalu terasa ketika disentuh</p>
+      </div>
+      <div class="products-grid" id="featuredGrid">
+        <div class="spinner col-4"><i class="fas fa-circle-notch"></i></div>
+      </div>
+      <div style="text-align:center;margin-top:32px">
+        <button class="btn-secondary" onclick="showSection('products')">Lihat Semua Produk <i class="fas fa-arrow-right" style="margin-left:6px"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="sec-pad" style="padding-top:0; background: var(--rose-pale); padding: 60px 0;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Terbaru</div>
+        <h2 class="section-title">Berita & Update</h2>
+        <p class="section-desc">Informasi terbaru tentang koleksi, promo, dan event Vionae</p>
+      </div>
+      <div class="news-grid" id="homeNewsGrid">
+        <div class="spinner"><i class="fas fa-circle-notch"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RATING FORM -->
+  <div class="sec-pad">
+    <div class="container" style="max-width:720px">
+      <div class="section-header">
+        <div class="section-eyebrow">Feedback</div>
+        <h2 class="section-title">Beri Penilaian Kami</h2>
+        <p class="section-desc">Masukan kamu sangat berarti untuk kami terus berkembang ✨</p>
+      </div>
+      <div class="rating-form-wrap">
+        <iframe src="https://forms.gle/PWTNHgQLWEJxDuFH9" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PRODUCTS ==================== -->
+<div class="section" id="sec-products">
+  <div class="sec-pad">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Katalog Eksklusif</div>
+        <h2 class="section-title">Koleksi per Batch</h2>
+        <p class="section-desc">Setiap batch adalah sebuah narasi tersendiri temukan koleksi yang berbicara untukmu</p>
+      </div>
+      <div class="search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Cari produk atau batch..." oninput="filterProducts()">
+      </div>
+      <div class="batch-nav" id="batchNav"></div>
+      <div id="batchContent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SERVICES ==================== -->
+<div class="section" id="sec-services">
+  <div class="sec-pad">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Layanan Kami</div>
+        <h2 class="section-title">Pengalaman Belanja yang Berkesan</h2>
+        <p class="section-desc">Lebih dari sekadar transaksi setiap pembelian Vionae adalah sebuah pengalaman yang dirancang dengan penuh perhatian</p>
+      </div>
+      <div class="services-grid reveal-stagger">
+        <div class="service-card">
+          <div class="service-card-tag">✦ Gratis</div>
+          <div class="service-icon">🎁</div>
+          <h3>Gift Wrapping Premium</h3>
+          <p>Packing kado mewah dengan pilihan tema dan pesan personal yang terasa istimewa karena hadiah terbaik layak dikemas dengan sepenuh hati.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">Gratis untuk pembelian ≥ Rp 150.000</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">⚡ Express</div>
+          <div class="service-icon">🚀</div>
+          <h3>Pengiriman Express 24 Jam</h3>
+          <p>Keindahan tidak perlu menunggu. Pengiriman cepat 1–2 hari ke seluruh Indonesia diprioritaskan dengan penuh tanggung jawab.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">Tersedia untuk wilayah Sidoarjo& sekitarnya</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">💌 Personal</div>
+          <div class="service-icon">✉️</div>
+          <h3>Kartu Pesan Pribadi</h3>
+          <p>Tambahkan kartu ucapan dengan tulisan personal dari kamu, untuk orang yang paling berarti. Setiap kata dicetak dengan ketelitian.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">Tersedia di semua produk</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">👑 Eksklusif</div>
+          <div class="service-icon">💎</div>
+          <h3>Koleksi Limited Batch</h3>
+          <p>Setiap batch dirilis dalam jumlah terbatas desain unik, stok selalu habis. Miliki sebelum orang lain menemukannya.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">Notifikasi batch baru via WhatsApp</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">🤝 Konsultasi</div>
+          <div class="service-icon">💬</div>
+          <h3>Personal Gift Assistant</h3>
+          <p>Bingung cari kado untuk orang tersayang? Tim Vionae siap memberikan rekomendasi produk terbaik yang dikemas spesial sesuai keinginanmu.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">Chat langsung via WhatsApp</div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-tag">🔄 Jaminan</div>
+          <div class="service-icon">🛡️</div>
+          <h3>Garansi & Retur Mudah</h3>
+          <p>Tidak sesuai ekspektasi? Ajukan retur dalam 2×24 jam prosesnya mudah, cepat, dan tidak ribet. Kepuasanmu prioritas kami.</p>
+          <div style="font-size:12px;font-weight:600;color:var(--rose);margin-top:4px">2×24 jam sejak produk diterima</div>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, var(--rose-pale) 0%, var(--blush) 100%); border-radius: var(--radius-lg); padding: 48px; border: 1px solid var(--rose-light);">
+        <div class="section-header" style="margin-bottom:32px">
+          <div class="section-eyebrow">Alur Pemesanan</div>
+          <h2 class="section-title">Empat Langkah Menuju Keindahan</h2>
+        </div>
+        <div class="steps">
+          <div class="step-card"><div class="step-num">1</div><h4>Jelajahi Katalog</h4><p>Temukan aksesori yang berbicara tentang kepribadianmu dari koleksi limited batch kami.</p></div>
+          <div class="step-card"><div class="step-num">2</div><h4>Pilih & Pesan</h4><p>Pilih produk favoritmu dan lakukan pemesanan langsung via website atau WhatsApp.</p></div>
+          <div class="step-card"><div class="step-num">3</div><h4>Pembayaran Aman</h4><p>Bayar dengan metode pilihanmu aman, cepat, dan terkonfirmasi instan.</p></div>
+          <div class="step-card"><div class="step-num">4</div><h4>Dikirim Istimewa</h4><p>Produk dikemas dengan packaging premium dan dikirim dengan penuh perhatian ke pintumu.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<div class="section" id="sec-testimonials">
+  <div class="sec-pad">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Suara Pelanggan Kami</div>
+        <h2 class="section-title">Mereka yang Telah Merasakan</h2>
+        <p class="section-desc">Banyak  perempuan telah mempercayakan penampilan mereka pada Vionae ✦</p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <div class="spinner"><i class="fas fa-circle-notch"></i></div>
+      </div>
+      <div class="stats-bar" style="margin-top:48px">
+        <div class="stat-item"><div class="stat-number">1000+</div><div class="stat-label">Pelanggan Puas</div></div>
+        <div class="stat-item"><div class="stat-number">98%</div><div class="stat-label">Tingkat Kepuasan</div></div>
+        <div class="stat-item"><div class="stat-number">24h</div><div class="stat-label">Respon Cepat</div></div>
+        <div class="stat-item"><div class="stat-number">⭐ 4.9</div><div class="stat-label">Rating Toko</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background: var(--rose-pale); padding: 60px 0;">
+    <div class="container" style="max-width:720px">
+      <div class="section-header">
+        <div class="section-eyebrow">Feedback</div>
+        <h2 class="section-title">Beri Penilaian</h2>
+      </div>
+      <div class="rating-form-wrap">
+        <iframe src="https://forms.gle/PWTNHgQLWEJxDuFH9" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<div class="section" id="sec-contact">
+  <div class="sec-pad">
+    <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">Hubungi Kami</div>
+            <h2 class="section-title">Kontak & Konsultasi</h2>
+            <p class="section-desc">Kami dengan senang hati membantu kamu menemukan aksesori yang paling tepat</p>
+          </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-card">
+            <h3>Informasi Kontak</h3>
+            <div class="contact-row">
+              <div class="contact-icon ci-wa"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-row-label">WhatsApp Bisnis</div>
+                <div class="contact-row-val"><a href="https://wa.me/6287848785581" target="_blank">+62 878-4878-5581</a></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon ci-em"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-row-label">Email Bisnis</div>
+                <div class="contact-row-val"><a href="mailto:vionaecollection@gmail.com">vionaecollection@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon ci-ig"><i class="fab fa-instagram"></i></div>
+              <div>
+                <div class="contact-row-label">Instagram</div>
+                <div class="contact-row-val"><a href="https://www.instagram.com/vionae_collection" target="_blank">@vionae_collection</a></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="contact-row-label">Alamat Lokasi</div>
+                <div class="contact-row-val">Sidoarjo, Jawa Timur, Indonesia<br><span style="font-size:12px;color:var(--text-soft)">(Operasional online layanan kunjungan toko dengan perjanjian via WA)</span></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" style="background:linear-gradient(135deg,#6366f1,#4f46e5)"><i class="fas fa-clock"></i></div>
+              <div>
+                <div class="contact-row-label">Jam Operasional</div>
+                <div class="contact-row-val">Senin – Sabtu: 09.00 – 21.00 WIB<br><span style="font-size:12px;color:var(--text-soft)">Minggu: 10.00 – 17.00 WIB</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <h3>Belanja di Marketplace</h3>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a href="https://shopee.co.id/vionaecollection" target="_blank" style="background:#ee4d2d;color:white;padding:10px 20px;border-radius:var(--radius-sm);font-weight:600;font-size:13px;display:flex;align-items:center;gap:6px"><i class="fas fa-store"></i> Shopee</a>
+              <a href="https://tk.tokopedia.com/ZSx8mGBNM/" target="_blank" style="background: #42b549; color: white; padding: 10px 22px; border-radius: 12px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 500; box-shadow: 0 4px 12px rgba(66, 181, 73, 0.2); transition: all 0.3s ease;"><i class="fas fa-shopping-bag" style="font-size: 14px;"></i>Tokopedia</a>
+            </div>
+          </div>
+
+          <div class="faq-list">
+            <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;color:var(--text-dark)">Pertanyaan Umum</h3>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">
+                <span>Bagaimana cara memesan produk?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">Kamu bisa memesan langsung via WhatsApp kami atau melalui marketplace Shopee. Kirimkan kode produk yang ingin kamu pesan dan kami akan segera memprosesnya. Atau langsung bayar di website ini!</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">
+                <span>Apakah produk bisa dikirim sebagai hadiah langsung ke penerima?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">Ya! Produk Vionae bisa dikirim langsung ke alamat penerima hadiah. Kamu juga bisa menambahkan nama penerima dan pesan khusus agar hadiah terasa lebih personal.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">
+                <span>Berapa lama waktu pengiriman?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">Sidoarjo: 1-2 hari kerja. Luar Sidoarjo: 2-5 hari kerja. Kami juga menyediakan layanan express 24 jam dengan biaya tambahan untuk wilayah Sidoarjo.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">
+                <span>Apakah batch sebelumnya akan dikeluarkan kembali?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">Beberapa batch berpotensi untuk dikeluarkan kembali tergantung ketersediaan bahan dan keputusan produksi. Informasi restock akan kami umumkan melalui media resmi Vionae.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" onclick="toggleFaq(this)">
+                <span>Metode pembayaran apa saja yang tersedia?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-a">Kami menerima pembayaran via Transfer Bank (BCA, Mandiri, BNI, BRI), QRIS, dan DANA. Setelah pembayaran, upload bukti transfer di website dan pesanan akan segera diproses.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Kirim Pesan</h3>
+          <div class="form-group">
+            <label class="form-label">Nama *</label>
+            <input type="text" class="form-input" id="cName" placeholder="Nama lengkapmu">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Jenis Permintaan *</label>
+            <select class="form-select" id="cType">
+              <option value="">Pilih jenis permintaan</option>
+              <option>Gift Wrapping</option>
+              <option>Pertanyaan Produk</option>
+              <option>Pertanyaan Pengiriman</option>
+              <option>Pertanyaan Umum</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kontak (WA / Email)</label>
+            <input type="text" class="form-input" id="cContact" placeholder="0812xxxx atau email@contoh.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pesan *</label>
+            <textarea class="form-textarea" id="cMessage" placeholder="Jelaskan kebutuhanmu secara detail..."></textarea>
+          </div>
+          <button class="btn-primary" style="width:100%;justify-content:center" onclick="sendContact()">
+            <i class="fas fa-paper-plane"></i> Kirim via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<div class="section" id="sec-about">
+  <div class="sec-pad">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Tentang Kami</div>
+        <h2 class="section-title">Kisah di Balik Vionae</h2>
+        <p class="section-desc">Lahir dari keyakinan bahwa keindahan sejati tersembunyi dalam detail yang sering diabaikan</p>
+      </div>
+
+      <div class="about-hero">
+        <div class="about-img">
+          <img src="image/vionaeteam.png" alt="Vionae Team" onerror="this.src='https://placehold.co/600x400/fce8f1/d4547a?text=Vionae+Team'">
+        </div>
+        <div class="about-text">
+          <h2>Dari Detail Kecil, Untuk Perempuan Besar</h2>
+          <p>Sejak Januari 2026, Vionae Collection hadir sebagai simbol perhatian terhadap hal-hal kecil yang membuat penampilan terasa luar biasa. Bukan sekadar aksesori melainkan pernyataan halus tentang siapa dirimu.</p>
+          <p>Setiap koleksi dirancang dengan ketelitian dan rasa yang mendalam dari lekukan gelang hingga detail tali phone strap semua adalah hasil dari kecintaan kami pada keindahan yang fungsional.</p>
+          <p>Kami merilis dalam limited batch eksklusif, karena kami percaya bahwa keistimewaan hanya bisa dirasakan oleh mereka yang memilih dengan penuh kesadaran.</p>
+          <div style="display:flex;gap:10px;margin-top:24px">
+            <button class="btn-primary" onclick="showSection('products')"><i class="fas fa-heart"></i> Jelajahi Koleksi</button>
+            <a href="https://wa.me/6287848785581" target="_blank" class="btn-secondary"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visi-misi">
+        <div class="vm-card">
+          <h3>Visi</h3>
+          <p>Menjadi brand aksesori premium yang dipercaya untuk menyempurnakan penampilan sehari-hari melalui desain yang elegan, bermakna, dan memiliki ciri khas yang tak terlupakan. Kami ingin setiap produk Vionae menjadi bagian dari momen indah dalam hidup pemakainya.</p>
+        </div>
+        <div class="vm-card">
+          <h3>Misi</h3>
+          <ul>
+            <li>Menghadirkan aksesori dengan desain yang elegan, timeless, dan mudah dipadukan</li>
+            <li>Menjaga eksklusivitas melalui koleksi limited batch agar setiap item terasa benar-benar istimewa</li>
+            <li>Memberikan pengalaman belanja yang hangat, personal, dan berkesan</li>
+            <li>Terus berinovasi demi menghadirkan keindahan yang relevan dan bermakna</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="founder-card">
+        <img class="founder-avatar" src="image/founder.jpeg" alt="Founder" onerror="this.src='https://placehold.co/110x110/fce8f1/d4547a?text=J'">
+        <div>
+          <div class="founder-name">Jonathan Christian Alfino</div>
+          <div class="founder-role">Founder & Creative Director, Vionae Collection</div>
+          <p class="founder-quote">"Vionae lahir dari ketertarikan saya pada dunia aksesori perempuan yang begitu beragam. Saya percaya, setiap perempuan punya cerita dan karakternya sendiri. Lewat Vionae, saya ingin menghadirkan pilihan aksesori yang bisa membebaskan kamu untuk mengekspresikan diri menjadi versi terbaikmu, tanpa harus mendikte atau mengikuti tren orang lain."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- ==================== SECTION KEBIJAKAN ==================== -->
+<!-- SECTION KEBIJAKAN — Kriteria Kurasi Midtrans #2 (T&C + Refund Policy) -->
+<div class="section" id="sec-kebijakan">
+  <div class="sec-pad">
+    <div class="container" style="max-width:860px">
+
+      <!-- TAB NAVIGATION -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;padding-bottom:20px;border-bottom:2px solid var(--border)">
+        <button onclick="showPolicyTab('syarat')" id="tabBtn-syarat" class="batch-btn active" style="font-size:14px;padding:10px 22px">📋 Syarat &amp; Ketentuan</button>
+        <button onclick="showPolicyTab('refund')" id="tabBtn-refund" class="batch-btn" style="font-size:14px;padding:10px 22px">🔄 Kebijakan Pengembalian</button>
+        <button onclick="showPolicyTab('privasi')" id="tabBtn-privasi" class="batch-btn" style="font-size:14px;padding:10px 22px">🔒 Kebijakan Privasi</button>
+      </div>
+
+      <!-- ===== TAB 1: SYARAT & KETENTUAN ===== -->
+      <div id="policyTab-syarat" class="policy-tab-content">
+        <div class="section-header" style="text-align:left;margin-bottom:28px">
+          <div class="section-eyebrow">Legal</div>
+          <h2 class="section-title" style="text-align:left">Syarat &amp; Ketentuan</h2>
+          <p style="font-size:13px;color:var(--text-soft)">Terakhir diperbarui: Januari 2026</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-section">
+            <h3>1. Penerimaan Syarat</h3>
+            <p>Dengan mengakses dan menggunakan website Vionae Collection (vionaecollection.com), Anda menyatakan telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku. Jika Anda tidak menyetujui syarat ini, mohon untuk tidak menggunakan layanan kami.</p>
+          </div>
+          <div class="policy-section">
+            <h3>2. Tentang Vionae Collection</h3>
+            <p>Vionae Collection adalah usaha dagang online yang menjual perhiasan dan aksesori wanita, beroperasi sejak Januari 2026. Kami berbasis di Sidoarjo, Jawa Timur, Indonesia.</p>
+            <p>Kontak resmi: <a href="mailto:vionaecollection@gmail.com" style="color:var(--rose-deep)">vionaecollection@gmail.com</a> | WhatsApp: <a href="https://wa.me/6287848785581" style="color:var(--rose-deep)">+62 878-4878-5581</a></p>
+          </div>
+          <div class="policy-section">
+            <h3>3. Produk dan Pemesanan</h3>
+            <p><strong>3.1 Katalog Produk.</strong> Semua produk yang tercantum di website adalah perhiasan dan aksesori wanita (gelang, kalung, scrunchie, phone strap, dan sejenisnya) yang dirilis dalam limited batch eksklusif. Foto produk diusahakan seakurat mungkin, namun warna aktual dapat sedikit berbeda akibat pengaturan layar perangkat Anda.</p>
+            <p><strong>3.2 Pemesanan.</strong> Pemesanan dapat dilakukan melalui fitur keranjang belanja di website ini atau melalui WhatsApp resmi kami. Pesanan dianggap sah setelah pembayaran berhasil dikonfirmasi oleh sistem.</p>
+            <p><strong>3.3 Ketersediaan Stok.</strong> Produk dengan status "Pre-order" dikirim setelah batch produksi selesai. Estimasi waktu pengiriman pre-order akan dikomunikasikan via WhatsApp. Stok dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya.</p>
+            <p><strong>3.4 Harga.</strong> Semua harga yang tercantum di website menggunakan mata uang Rupiah Indonesia (Rp / IDR) dan sudah termasuk PPN jika berlaku. Harga ongkos kirim dihitung terpisah saat checkout.</p>
+          </div>
+          <div class="policy-section">
+            <h3>4. Pembayaran</h3>
+            <p><strong>4.1 Metode Pembayaran.</strong> Kami menerima pembayaran melalui sistem Midtrans Snap yang mencakup: QRIS, GoPay, ShopeePay, Virtual Account (BCA, BNI, BRI, Mandiri, Permata), dan kartu kredit/debit. Pembayaran diproses secara aman melalui pop-up Midtrans di website ini Anda tidak akan diarahkan ke situs lain.</p>
+            <p><strong>4.2 Mata Uang.</strong> Semua transaksi dilakukan dalam mata uang Rupiah Indonesia (IDR).</p>
+            <p><strong>4.3 Konfirmasi Pembayaran.</strong> Konfirmasi pesanan akan dikirimkan melalui WhatsApp setelah pembayaran berhasil. Harap simpan bukti pembayaran Anda.</p>
+            <p><strong>4.4 Keamanan.</strong> Kami menggunakan teknologi enkripsi SSL dan gateway pembayaran tersertifikasi (Midtrans/Veritrans) untuk memastikan keamanan transaksi Anda.</p>
+          </div>
+          <div class="policy-section">
+            <h3>5. Pengiriman</h3>
+            <p><strong>5.1 Wilayah Pengiriman.</strong> Kami melayani pengiriman ke seluruh wilayah Indonesia.</p>
+            <p><strong>5.2 Estimasi Waktu.</strong> Sidoarjo dan sekitarnya: 1–2 hari kerja. Luar Jawa: 3–7 hari kerja. Layanan express 24 jam tersedia untuk wilayah Sidoarjodengan biaya tambahan.</p>
+            <p><strong>5.3 Biaya Pengiriman.</strong> Biaya pengiriman dihitung berdasarkan berat paket dan lokasi tujuan, ditampilkan saat proses checkout.</p>
+            <p><strong>5.4 Risiko Pengiriman.</strong> Setelah paket diserahkan kepada kurir, risiko kerusakan atau kehilangan menjadi tanggung jawab jasa pengiriman. Kami sangat menyarankan pembeli menggunakan asuransi pengiriman.</p>
+          </div>
+          <div class="policy-section">
+            <h3>6. Hak Kekayaan Intelektual</h3>
+            <p>Seluruh konten di website ini termasuk logo, foto produk, teks, dan desain adalah milik Vionae Collection dan dilindungi hak cipta. Dilarang menyalin, mendistribusikan, atau menggunakan konten ini tanpa izin tertulis dari kami.</p>
+          </div>
+          <div class="policy-section">
+            <h3>7. Batasan Tanggung Jawab</h3>
+            <p>Vionae Collection tidak bertanggung jawab atas kerugian tidak langsung, insidental, atau konsekuensial yang timbul dari penggunaan produk atau layanan kami, melampaui nilai transaksi yang telah dilakukan.</p>
+          </div>
+          <div class="policy-section">
+            <h3>8. Perubahan Syarat</h3>
+            <p>Vionae Collection berhak mengubah syarat dan ketentuan ini sewaktu-waktu. Perubahan akan diumumkan melalui website dan/atau WhatsApp resmi. Penggunaan layanan setelah perubahan dianggap sebagai persetujuan terhadap syarat yang baru.</p>
+          </div>
+          <div class="policy-section">
+            <h3>9. Hukum yang Berlaku</h3>
+            <p>Syarat dan ketentuan ini tunduk pada hukum yang berlaku di Republik Indonesia. Segala sengketa diselesaikan secara musyawarah; jika tidak tercapai kesepakatan, akan diselesaikan melalui pengadilan yang berwenang di Sidoarjo, Jawa Timur.</p>
+          </div>
+          <div class="policy-section">
+            <h3>10. Hubungi Kami</h3>
+            <p>Jika Anda memiliki pertanyaan mengenai syarat dan ketentuan ini, silakan hubungi kami:</p>
+            <p>📧 Email: <a href="mailto:vionaecollection@gmail.com" style="color:var(--rose-deep)">vionaecollection@gmail.com</a><br>
+            📱 WhatsApp: <a href="https://wa.me/6287848785581" style="color:var(--rose-deep)">+62 878-4878-5581</a><br>
+            📍 Alamat: Sidoarjo, Jawa Timur, Indonesia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB 2: KEBIJAKAN PENGEMBALIAN DANA & PRODUK ===== -->
+      <div id="policyTab-refund" class="policy-tab-content" style="display:none">
+        <div class="section-header" style="text-align:left;margin-bottom:28px">
+          <div class="section-eyebrow">Refund Policy</div>
+          <h2 class="section-title" style="text-align:left">Kebijakan Pengembalian Dana &amp; Produk</h2>
+          <p style="font-size:13px;color:var(--text-soft)">Terakhir diperbarui: Januari 2026</p>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--rose-pale),var(--blush));border:1.5px solid var(--rose-light);border-radius:var(--radius-md);padding:20px 24px;margin-bottom:32px">
+          <p style="font-weight:600;color:var(--rose-deep);font-size:15px;margin-bottom:6px">💗 Kepuasan Anda adalah Prioritas Kami</p>
+          <p style="font-size:14px;color:var(--text-mid);line-height:1.7">Kami berkomitmen untuk memberikan produk terbaik. Jika ada masalah dengan pesanan Anda, kami siap membantu sesuai kebijakan berikut.</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-section">
+            <h3>1. Kondisi yang Memenuhi Syarat Pengembalian</h3>
+            <p>Pengembalian produk dan/atau permintaan pengembalian dana <strong>dapat diajukan</strong> dalam kondisi berikut:</p>
+            <ul style="list-style:none;padding:0;margin-top:12px">
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#10b981;font-size:16px">✓</span><span>Produk rusak atau cacat saat tiba (harus dilaporkan dalam <strong>2×24 jam</strong> sejak paket diterima, disertai foto/video unboxing)</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#10b981;font-size:16px">✓</span><span>Produk yang diterima <strong>tidak sesuai</strong> dengan pesanan (salah item, salah varian)</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#10b981;font-size:16px">✓</span><span>Produk hilang dalam pengiriman dan tidak tiba dalam <strong>14 hari kerja</strong> sejak pengiriman</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0"><span style="color:#10b981;font-size:16px">✓</span><span>Pembayaran berhasil namun pesanan tidak diproses oleh sistem</span></li>
+            </ul>
+          </div>
+          <div class="policy-section">
+            <h3>2. Kondisi yang TIDAK Memenuhi Syarat</h3>
+            <ul style="list-style:none;padding:0;margin-top:12px">
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#ef4444;font-size:16px">✗</span><span>Pengembalian karena perubahan pikiran (produk sudah sesuai deskripsi)</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#ef4444;font-size:16px">✗</span><span>Produk yang sudah dipakai, dicuci, atau tag/kemasan sudah dilepas</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#ef4444;font-size:16px">✗</span><span>Kerusakan akibat pemakaian tidak sesuai anjuran (mis. terkena air berlebih, bahan kimia)</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)"><span style="color:#ef4444;font-size:16px">✗</span><span>Perbedaan warna minor akibat variasi layar perangkat</span></li>
+              <li style="display:flex;gap:10px;padding:10px 0"><span style="color:#ef4444;font-size:16px">✗</span><span>Laporan kerusakan yang diajukan lebih dari 2×24 jam setelah produk diterima</span></li>
+            </ul>
+          </div>
+          <div class="policy-section">
+            <h3>3. Prosedur Pengajuan Pengembalian</h3>
+            <div class="preorder-steps" style="margin-top:16px">
+              <div class="preorder-step"><div class="preorder-step-num" style="background:linear-gradient(135deg,var(--rose),var(--rose-deep))">1</div><p><strong>Hubungi kami via WhatsApp</strong> dalam 2×24 jam sejak produk diterima: <a href="https://wa.me/6287848785581" style="color:var(--rose-deep)">+62 878-4878-5581</a></p></div>
+              <div class="preorder-step"><div class="preorder-step-num" style="background:linear-gradient(135deg,var(--rose),var(--rose-deep))">2</div><p><strong>Lampirkan foto/video</strong> kondisi produk, kemasan, dan bukti pembelian (nomor order)</p></div>
+              <div class="preorder-step"><div class="preorder-step-num" style="background:linear-gradient(135deg,var(--rose),var(--rose-deep))">3</div><p><strong>Tim kami akan memverifikasi</strong> dalam 1–3 hari kerja dan menghubungi Anda melalui WhatsApp</p></div>
+              <div class="preorder-step"><div class="preorder-step-num" style="background:linear-gradient(135deg,var(--rose),var(--rose-deep))">4</div><p><strong>Jika disetujui</strong>, tim kami akan memberikan instruksi pengiriman pengembalian produk</p></div>
+              <div class="preorder-step"><div class="preorder-step-num" style="background:linear-gradient(135deg,var(--rose),var(--rose-deep))">5</div><p><strong>Dana dikembalikan</strong> dalam 5–14 hari kerja ke rekening/dompet digital yang Anda daftarkan</p></div>
+            </div>
+          </div>
+          <div class="policy-section">
+            <h3>4. Opsi Penyelesaian</h3>
+            <p>Bergantung pada situasi, penyelesaian yang dapat kami tawarkan meliputi:</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px">
+              <div style="background:var(--rose-pale);border:1px solid var(--rose-light);border-radius:var(--radius-sm);padding:16px;text-align:center">
+                <div style="font-size:24px;margin-bottom:8px">🔄</div>
+                <div style="font-weight:700;font-size:14px;color:var(--rose-deep)">Penukaran Produk</div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:4px">Tukar dengan produk yang sama atau setara (stok tergantung ketersediaan)</div>
+              </div>
+              <div style="background:var(--rose-pale);border:1px solid var(--rose-light);border-radius:var(--radius-sm);padding:16px;text-align:center">
+                <div style="font-size:24px;margin-bottom:8px">💰</div>
+                <div style="font-weight:700;font-size:14px;color:var(--rose-deep)">Pengembalian Dana</div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:4px">Refund penuh ke metode pembayaran asli dalam 5–14 hari kerja</div>
+              </div>
+              <div style="background:var(--rose-pale);border:1px solid var(--rose-light);border-radius:var(--radius-sm);padding:16px;text-align:center">
+                <div style="font-size:24px;margin-bottom:8px">🎁</div>
+                <div style="font-weight:700;font-size:14px;color:var(--rose-deep)">Store Credit</div>
+                <div style="font-size:12px;color:var(--text-soft);margin-top:4px">Kredit toko yang dapat digunakan untuk pembelian berikutnya</div>
+              </div>
+            </div>
+          </div>
+          <div class="policy-section">
+            <h3>5. Kebijakan Pre-order</h3>
+            <p>Untuk produk pre-order, DP (Down Payment) yang telah dibayarkan <strong>tidak dapat dikembalikan</strong> jika pembatalan dilakukan oleh pelanggan setelah proses produksi dimulai. Pembatalan yang sah dan refund penuh hanya berlaku jika produk gagal diproduksi oleh kami.</p>
+          </div>
+          <div class="policy-section">
+            <h3>6. Ongkos Kirim Pengembalian</h3>
+            <p>Ongkos kirim pengembalian produk ditanggung <strong>oleh Vionae Collection</strong> jika pengembalian disebabkan oleh kesalahan kami (produk cacat, salah kirim). Jika pengembalian atas permintaan pelanggan dengan alasan lain yang disetujui, ongkos kirim ditanggung pelanggan.</p>
+          </div>
+          <div class="policy-section">
+            <h3>7. Kontak untuk Pengembalian</h3>
+            <p>📱 WhatsApp: <a href="https://wa.me/6287848785581" style="color:var(--rose-deep)">+62 878-4878-5581</a> (Senin–Sabtu, 09.00–21.00 WIB)<br>
+            📧 Email: <a href="mailto:vionaecollection@gmail.com" style="color:var(--rose-deep)">vionaecollection@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== TAB 3: KEBIJAKAN PRIVASI ===== -->
+      <div id="policyTab-privasi" class="policy-tab-content" style="display:none">
+        <div class="section-header" style="text-align:left;margin-bottom:28px">
+          <div class="section-eyebrow">Privacy Policy</div>
+          <h2 class="section-title" style="text-align:left">Kebijakan Privasi</h2>
+          <p style="font-size:13px;color:var(--text-soft)">Terakhir diperbarui: Januari 2026</p>
+        </div>
+        <div class="policy-body">
+          <div class="policy-section">
+            <h3>1. Data yang Kami Kumpulkan</h3>
+            <p>Saat Anda berbelanja di Vionae Collection, kami mengumpulkan: nama lengkap, nomor telepon/WhatsApp, alamat email, alamat pengiriman, dan data transaksi. Data ini hanya digunakan untuk memproses pesanan Anda.</p>
+          </div>
+          <div class="policy-section">
+            <h3>2. Penggunaan Data</h3>
+            <p>Data Anda kami gunakan untuk: memproses dan mengirim pesanan, menghubungi Anda terkait pesanan, meningkatkan layanan kami, dan (dengan persetujuan) mengirimkan informasi promo.</p>
+          </div>
+          <div class="policy-section">
+            <h3>3. Keamanan Data</h3>
+            <p>Kami menggunakan teknologi enkripsi SSL dan gateway pembayaran Midtrans yang tersertifikasi PCI-DSS untuk melindungi data transaksi Anda. Kami tidak menyimpan data kartu kredit/debit Anda.</p>
+          </div>
+          <div class="policy-section">
+            <h3>4. Berbagi Data</h3>
+            <p>Kami tidak menjual atau menyewakan data pribadi Anda kepada pihak ketiga. Data hanya dibagikan kepada: jasa pengiriman (untuk keperluan pengiriman) dan Midtrans (payment gateway, untuk keperluan pembayaran), keduanya tunduk pada kebijakan privasi mereka masing-masing.</p>
+          </div>
+          <div class="policy-section">
+            <h3>5. Hak Anda</h3>
+            <p>Anda memiliki hak untuk mengakses, mengoreksi, atau meminta penghapusan data pribadi Anda. Hubungi kami melalui email atau WhatsApp untuk mengajukan permintaan tersebut.</p>
+          </div>
+          <div class="policy-section">
+            <h3>6. Kontak</h3>
+            <p>📧 <a href="mailto:vionaecollection@gmail.com" style="color:var(--rose-deep)">vionaecollection@gmail.com</a><br>
+            📱 <a href="https://wa.me/6287848785581" style="color:var(--rose-deep)">+62 878-4878-5581</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Vionae Collection</div>
+        <div class="footer-brand-desc">Aksesori eksklusif dengan detail yang menyempurnakan setiap penampilan hadir dalam limited batch untuk perempuan yang memilih dengan penuh kesadaran.</div>
+        <div class="footer-socials">
+          <a class="footer-social-btn" href="https://www.instagram.com/vionae_collection" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a class="footer-social-btn" href="https://wa.me/6287848785581" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a class="footer-social-btn" href="mailto:vionaecollection@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a class="footer-social-btn" href="https://shopee.co.id/vionaecollection" target="_blank"><i class="fas fa-store"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a onclick="showSection('home')">Beranda</a></li>
+          <li><a onclick="showSection('products')">Produk</a></li>
+          <li><a onclick="showSection('services')">Layanan</a></li>
+          <li><a onclick="showSection('testimonials')">Testimoni</a></li>
+          <li><a onclick="showSection('contact')">Kontak</a></li>
+          <li><a onclick="showSection('about')">Tentang Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kebijakan</h4>
+        <ul>
+          <li><a onclick="showSection('kebijakan');scrollToPolicy('syarat')">Syarat &amp; Ketentuan</a></li>
+          <li><a onclick="showSection('kebijakan');scrollToPolicy('refund')">Kebijakan Pengembalian</a></li>
+          <li><a onclick="showSection('kebijakan');scrollToPolicy('privasi')">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6287848785581" target="_blank"><i class="fab fa-whatsapp" style="color:#25d366;margin-right:5px"></i>+62 878-4878-5581</a></li>
+          <li><a href="mailto:vionaecollection@gmail.com"><i class="fas fa-envelope" style="color:var(--rose-light);margin-right:5px"></i>vionaecollection@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/vionae_collection" target="_blank"><i class="fab fa-instagram" style="color:#e1306c;margin-right:5px"></i>@vionae_collection</a></li>
+          <li><span style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.6"><i class="fas fa-map-marker-alt" style="color:var(--rose-light);margin-right:5px"></i>Sidoarjo, Jawa Timur, Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vionae Collection. All rights reserved.</span>
+      <span>Made with 💗 for every girl</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== CART PANEL ==================== -->
+<div class="cart-panel-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-panel-header">
+    <h2>🛍️ Keranjang</h2>
+    <button class="modal-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-panel-body" id="cartBody">
+    <div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Keranjang masih kosong</p><button class="btn-secondary" style="margin-top:8px" onclick="showSection('products');toggleCart()">Lihat Produk</button></div>
+  </div>
+  <div class="cart-panel-footer" id="cartFooter" style="display:none">
+    <!-- ===== SEARCHABLE ONGKIR WIDGET ===== -->
+    <div class="ship-widget" id="shipWidget">
+      <div class="ship-widget-label">
+        <i class="fas fa-map-marker-alt"></i> Wilayah Pengiriman
+      </div>
+      <div class="ship-search-wrap">
+        <input type="text" id="shipSearchInput" class="ship-search-input"
+          placeholder="Ketik kabupaten atau kode pos..."
+          autocomplete="off"
+          oninput="onShipSearch(this.value)"
+          onfocus="onShipFocus()"
+          onkeydown="onShipKeydown(event)">
+        <i class="fas fa-search ship-search-icon" id="shipSearchIcon"></i>
+        <button class="ship-clear-btn" id="shipClearBtn" onclick="clearShipping()" title="Hapus pilihan">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="ship-dropdown" id="shipDropdown"></div>
+      </div>
+      <div class="ship-selected-badge" id="shipSelectedBadge">
+        <i class="fas fa-check-circle" style="color:var(--rose);font-size:14px"></i>
+        <span class="ship-selected-badge-text" id="shipSelectedText">-</span>
+        <span class="ship-selected-badge-tarif" id="shipSelectedTarif">-</span>
+      </div>
+    </div>
+    <!-- ====================================== -->
+    <div id="cartBreakdown"></div>
+
+    <!-- T&C CHECKBOX -->
+    <div class="tnc-wrap">
+      <label class="tnc-label">
+        <input type="checkbox" id="tncCheckbox" onchange="toggleCheckoutBtn()">
+        <span class="tnc-custom-box">
+          <i class="fas fa-check tnc-check-icon"></i>
+        </span>
+        <span class="tnc-text">Saya telah membaca dan menyetujui <button class="tnc-link" onclick="openModal('tncModal');event.preventDefault()">Syarat &amp; Ketentuan</button> yang berlaku.</span>
+      </label>
+    </div>
+
+    <button class="btn-primary" id="checkoutBtn" style="width:100%;justify-content:center;margin-bottom:10px;opacity:0.45;cursor:not-allowed;pointer-events:none" disabled onclick="openPayment()">
+      <i class="fas fa-credit-card"></i> Bayar Sekarang
+    </button>
+    <button class="btn-secondary" id="checkoutWABtn" style="width:100%;justify-content:center;opacity:0.45;cursor:not-allowed;pointer-events:none" disabled onclick="checkoutWA()">
+      <i class="fab fa-whatsapp"></i> Selesaikan Pemesanan via WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- ==================== T&C MINI MODAL ==================== -->
+<div class="modal-overlay" id="tncModal">
+  <div class="modal-box modal-md">
+    <div class="modal-header">
+      <h2 style="font-size:18px">Syarat &amp; Ketentuan</h2>
+      <button class="modal-close" onclick="closeModal('tncModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div style="padding:24px;overflow-y:auto;max-height:65vh;font-size:13.5px;color:var(--text-mid);line-height:1.85">
+      <p style="margin-bottom:14px">Dengan melanjutkan pembelian di <strong>Vionae Collection</strong>, kamu menyatakan telah membaca dan menyetujui seluruh ketentuan berikut:</p>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:var(--rose-pale);border-radius:var(--radius-sm);padding:14px 16px;border-left:3px solid var(--rose)">
+          <div style="font-weight:700;color:var(--rose-deep);margin-bottom:4px">📦 Pemesanan & Stok</div>
+          <p style="margin:0">Produk ready stock diproses dalam 1×24 jam. Produk pre-order mengikuti estimasi batch yang dikomunikasikan via WhatsApp. Stok dapat berubah sewaktu-waktu.</p>
+        </div>
+        <div style="background:var(--rose-pale);border-radius:var(--radius-sm);padding:14px 16px;border-left:3px solid var(--rose)">
+          <div style="font-weight:700;color:var(--rose-deep);margin-bottom:4px">💳 Pembayaran</div>
+          <p style="margin:0">Pembayaran dilakukan melalui sistem Midtrans (QRIS, GoPay, ShopeePay, Virtual Account) atau via WhatsApp. Pesanan hanya diproses setelah pembayaran terkonfirmasi.</p>
+        </div>
+        <div style="background:var(--rose-pale);border-radius:var(--radius-sm);padding:14px 16px;border-left:3px solid var(--rose)">
+          <div style="font-weight:700;color:var(--rose-deep);margin-bottom:4px">🚚 Pengiriman</div>
+          <p style="margin:0">Pengiriman ke seluruh Indonesia. Estimasi: Sidoarjo 1–2 hari, Pulau Jawa 2–4 hari, Luar Jawa 3–7 hari kerja. Ongkir dihitung saat checkout.</p>
+        </div>
+        <div style="background:var(--rose-pale);border-radius:var(--radius-sm);padding:14px 16px;border-left:3px solid var(--rose)">
+          <div style="font-weight:700;color:var(--rose-deep);margin-bottom:4px">🔄 Pengembalian</div>
+          <p style="margin:0">Pengembalian dapat diajukan dalam 2×24 jam sejak produk diterima jika ada kerusakan atau ketidaksesuaian. Disertai foto/video unboxing sebagai bukti.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:18px;font-size:12.5px;color:var(--text-soft)">Untuk kebijakan lengkap, kunjungi halaman <button onclick="showSection('kebijakan');closeModal('tncModal')" style="background:none;border:none;color:var(--rose-deep);font-weight:600;cursor:pointer;font-size:12.5px;padding:0">Kebijakan Vionae →</button></p>
+    </div>
+    <div style="padding:16px 24px;border-top:1px solid var(--border)">
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="document.getElementById('tncCheckbox').checked=true;toggleCheckoutBtn();closeModal('tncModal')">
+        <i class="fas fa-check"></i> Saya Setuju
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PRODUCT DETAIL MODAL ==================== -->
+<div class="modal-overlay" id="detailModal">
+  <div class="modal-box modal-lg">
+    <div class="modal-header">
+      <h2 id="detailTitle">Detail Produk</h2>
+      <button class="modal-close" onclick="closeModal('detailModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-slider" id="detailSlider">
+        <!-- filled by JS -->
+      </div>
+      <div class="detail-info">
+        <div style="margin-bottom:8px" id="detailStatus"></div>
+        <div class="detail-price" id="detailPrice">Rp 0</div>
+        <div style="margin-bottom:12px" id="detailStars"></div>
+        <p class="detail-desc" id="detailDesc">Deskripsi produk.</p>
+        <div class="detail-actions" id="detailActions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NEWS MODAL ==================== -->
+<div class="modal-overlay" id="newsModal">
+  <div class="modal-box modal-md">
+    <div class="modal-header">
+      <h2 id="newsModalTitle">Berita</h2>
+      <button class="modal-close" onclick="closeModal('newsModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <img id="newsModalImg" src="" alt="" class="news-modal-img">
+    <div class="news-modal-body">
+      <p id="newsModalContent"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAYMENT MODAL ==================== -->
+
+<!-- ==================== PAYMENT MODAL (MIDTRANS) ==================== -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal-box modal-md">
+    <div class="modal-header">
+      <h2>💳 Pembayaran</h2>
+      <button class="modal-close" onclick="closeModal('paymentModal')"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Steps -->
+    <div class="payment-steps" id="paySteps">
+      <div class="pay-step active" id="pStep1">
+        <div class="pay-step-circle">1</div>
+        <div class="pay-step-label">Pesanan</div>
+      </div>
+      <div class="pay-step" id="pStep2">
+        <div class="pay-step-circle">2</div>
+        <div class="pay-step-label">Data Diri</div>
+      </div>
+      <div class="pay-step" id="pStep3">
+        <div class="pay-step-circle">3</div>
+        <div class="pay-step-label">Bayar</div>
+      </div>
+      <div class="pay-step" id="pStep4">
+        <div class="pay-step-circle">4</div>
+        <div class="pay-step-label">Selesai</div>
+      </div>
+    </div>
+
+    <!-- Panel 1: Order Review -->
+    <div class="payment-panel active" id="payPanel1">
+      <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:16px;color:var(--text-dark)">Ringkasan Pesanan</h3>
+      <div id="payOrderItems"></div>
+      <div class="pay-summary">
+        <div class="pay-row"><span>Subtotal</span><span id="paySub">Rp 0</span></div>
+        <div class="pay-row"><span>Ongkos Kirim</span><span id="payShipping"><span style="color:#f59e0b;font-size:12px;font-weight:500">⚠ Wilayah belum dipilih</span></span></div>
+        <div class="pay-row pay-row-total"><span>Total</span><span id="payTotal">Rp 0</span></div>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="goPayStep(2)">
+        Lanjut ke Data Diri <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- Panel 2: Customer Data -->
+    <div class="payment-panel" id="payPanel2">
+      <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:16px;color:var(--text-dark)">Data Pengiriman</h3>
+      <div class="form-group"><label class="form-label">Nama Lengkap *</label><input class="form-input" id="pName" placeholder="Nama penerima"></div>
+      <div class="form-group"><label class="form-label">Nomor WhatsApp / Telepon *</label><input class="form-input" id="pPhone" placeholder="08xxxxxxxxxx" type="tel"></div>
+      <div class="form-group"><label class="form-label">Email *</label><input class="form-input" id="pEmail" placeholder="email@kamu.com" type="email"></div>
+      <div class="form-group"><label class="form-label">Alamat Lengkap *</label><textarea class="form-textarea" id="pAddress" placeholder="Jalan, nomor rumah, RT/RW, kelurahan, kecamatan..." style="min-height:80px"></textarea></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="form-group"><label class="form-label">Kota / Kabupaten *</label><input class="form-input" id="pCity" placeholder="Contoh: Sidoarjo"></div>
+        <div class="form-group"><label class="form-label">Kode Pos *</label><input class="form-input" id="pPostCode" placeholder="61219" type="text" maxlength="10"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Catatan (opsional)</label><input class="form-input" id="pNote" placeholder="Misal: Tolong sertakan gift wrap, warna pink"></div>
+      <div style="display:flex;gap:10px">
+        <button class="btn-secondary" onclick="goPayStep(1)"><i class="fas fa-arrow-left"></i> Kembali</button>
+        <button class="btn-primary" style="flex:1;justify-content:center" onclick="goPayStep(3)">Lanjut ke Pembayaran <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- Panel 3: Midtrans Payment -->
+    <div class="payment-panel" id="payPanel3">
+      <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:8px;color:var(--text-dark)">Pembayaran Otomatis</h3>
+      <p style="font-size:13px;color:var(--text-soft);margin-bottom:20px;line-height:1.6">Klik tombol di bawah untuk membuka pop-up pembayaran. Pilih metode yang kamu suka.</p>
+
+      <!-- Metode yang tersedia -->
+      <div style="background:var(--rose-pale);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;margin-bottom:20px">
+        <div style="font-size:12px;font-weight:700;color:var(--text-soft);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px">Metode Tersedia</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="background:white;border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-mid);display:flex;align-items:center;gap:5px"><span>📱</span> QRIS</span>
+          <span style="background:white;border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-mid);display:flex;align-items:center;gap:5px"><span>🟢</span> GoPay</span>
+          <span style="background:white;border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-mid);display:flex;align-items:center;gap:5px"><span>🟠</span> ShopeePay</span>
+          <span style="background:white;border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-mid);display:flex;align-items:center;gap:5px"><span>🏦</span> Virtual Account BCA</span>
+          <span style="background:white;border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-mid);display:flex;align-items:center;gap:5px"><span>🏦</span> VA BNI / BRI / Mandiri</span>
+        </div>
+      </div>
+
+      <!-- Total ringkasan -->
+      <div style="background:white;border:1.5px solid var(--rose-light);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;color:var(--text-soft)">Total Pembayaran</span>
+        <span style="font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--rose-deep)" id="snapPayTotal">Rp 0</span>
+      </div>
+
+      <!-- Tombol utama Midtrans -->
+      <button class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:15px" id="snapPayBtn" onclick="startMidtransPayment()">
+        <i class="fas fa-lock"></i> Bayar Sekarang 
+      </button>
+
+      <!-- Fallback WA -->
+      <div style="text-align:center;margin:14px 0 4px;font-size:12px;color:var(--text-soft)">atau</div>
+      <button class="btn-secondary" style="width:100%;justify-content:center" onclick="fallbackToWA()">
+        <i class="fab fa-whatsapp"></i> Lanjut via WhatsApp
+      </button>
+
+      <button class="btn-secondary" style="justify-content:center;margin-top:10px;border:none;background:none;color:var(--text-soft);font-size:13px" onclick="goPayStep(2)">
+        <i class="fas fa-arrow-left"></i> Kembali ubah data
+      </button>
+
+      <!-- Loading overlay saat proses -->
+      <div id="midtransLoadingOverlay" style="display:none;position:absolute;inset:0;background:rgba(255,250,247,0.92);border-radius:var(--radius-md);z-index:10;display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+        <div style="font-size:32px;animation:spin 0.8s linear infinite">💳</div>
+        <div style="font-size:14px;font-weight:600;color:var(--rose-deep)">Menyiapkan pembayaran...</div>
+        <div style="font-size:12px;color:var(--text-soft)">Sebentar ya! Pop-up akan muncul segera</div>
+      </div>
+    </div>
+
+    <!-- Panel 4: Success / Result -->
+    <div class="payment-panel" id="payPanel4">
+      <div class="pay-success">
+        <div class="pay-success-icon" id="payResultIcon">🎉</div>
+        <h3 id="payResultTitle">Pembayaran Berhasil!</h3>
+        <p id="payResultMsg">Terima kasih! Pesananmu sedang diproses oleh tim Vionae Collection. 💗</p>
+        <div id="payResultDetail" style="background:var(--rose-pale);border:1px solid var(--rose-light);border-radius:var(--radius-sm);padding:14px;margin-bottom:24px;font-size:13px;color:var(--text-mid);line-height:1.7;text-align:left">
+          <i class="fas fa-check-circle" style="color:#10b981;margin-right:6px"></i> Pembayaran terkonfirmasi<br>
+          <i class="fas fa-clock" style="color:var(--rose);margin-right:6px"></i> Tim Vionae akan konfirmasi via WA kamu<br>
+          <i class="fas fa-truck" style="color:#2563eb;margin-right:6px"></i> Pesanan akan segera diproses
+        </div>
+        <button class="btn-secondary" id="payResultWABtn" style="margin:0 auto 10px;display:flex" onclick="sendOrderNotificationToWA(lastOrderId, lastOrderStatusLabel, lastOrderPaymentType)">
+          <i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp (opsional)
+        </button>
+        <button class="btn-primary" style="margin:0 auto;display:flex" onclick="closeModal('paymentModal')">
+          <i class="fas fa-check"></i> Selesai
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ==================== PRE-ORDER MODAL ==================== -->
+<div class="modal-overlay" id="preorderModal">
+  <div class="modal-box modal-md">
+    <div class="modal-header">
+      <h2>⏳ Form Pre-order</h2>
+      <button class="modal-close" onclick="closeModal('preorderModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div style="padding:20px;overflow-y:auto;max-height:75vh">
+      <!-- Product Preview -->
+      <div class="preorder-product-preview">
+        <img id="poImg" src="" alt="" onerror="this.src='https://placehold.co/70x70/fce8f1/d4547a?text=V'">
+        <div>
+          <div class="prod-name" id="poName">-</div>
+          <div class="prod-price" id="poPrice">Rp 0</div>
+          <div style="font-size:12px;color:var(--text-soft);margin-top:3px" id="poBatch"></div>
+        </div>
+      </div>
+
+      <!-- Info Box -->
+      <div class="preorder-info-box">
+        <h4>⚠️ Ketentuan Pre-order</h4>
+        <p>Produk ini tersedia via pre-order. Setelah mengisi form, tim kami akan menghubungi kamu via WhatsApp untuk konfirmasi DP dan estimasi pengiriman.</p>
+        <div class="preorder-steps">
+          <div class="preorder-step"><div class="preorder-step-num">1</div><p><strong>Isi form</strong> di bawah dan klik "Kirim Pre-order"</p></div>
+          <div class="preorder-step"><div class="preorder-step-num">2</div><p><strong>Tim kami menghubungi</strong> via WhatsApp untuk konfirmasi & DP</p></div>
+          <div class="preorder-step"><div class="preorder-step-num">3</div><p><strong>Bayar DP 50%</strong> untuk mengamankan pesananmu</p></div>
+          <div class="preorder-step"><div class="preorder-step-num">4</div><p><strong>Produk dikirim</strong> sesuai estimasi yang disepakati</p></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="preorder-form">
+        <div class="form-group">
+          <label class="form-label">Nama Lengkap *</label>
+          <input class="form-input" id="poFormName" placeholder="Nama lengkap kamu">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nomor WhatsApp *</label>
+          <input class="form-input" id="poFormPhone" placeholder="08xxxxxxxxxx">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Alamat Pengiriman *</label>
+          <textarea class="form-textarea" id="poFormAddress" placeholder="Alamat lengkap, kota, provinsi..." style="min-height:70px"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Jumlah Pesanan *</label>
+          <input class="form-input" id="poFormQty" type="number" min="1" value="1" placeholder="1">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Catatan (opsional)</label>
+          <input class="form-input" id="poFormNote" placeholder="Misal: pilih warna pink, perlu sebelum tgl 20">
+        </div>
+        <button class="btn-primary" style="width:100%;justify-content:center;padding:14px" onclick="submitPreorder()">
+          <i class="fab fa-whatsapp"></i> Kirim Pre-order via WhatsApp
+        </button>
+        <button class="btn-secondary" style="width:100%;justify-content:center;margin-top:10px" onclick="closeModal('preorderModal')">
+          Batal
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== GACHA MODAL ==================== -->
+<div class="modal-overlay" id="gachaModal">
+  <div class="modal-box modal-sm">
+    <div class="modal-header">
+      <h2>🎰 Spin Hadiah</h2>
+      <button class="modal-close" onclick="closeModal('gachaModal')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="gacha-body">
+      <div class="gacha-machine">
+        <div class="gacha-header">✨ VIONAE LUCKY SPIN ✨</div>
+        <div class="gacha-screen" id="gachaScreen">
+          🎁 MASUKKAN KODE PROMO
+        </div>
+        <div class="gacha-controls">
+          <input class="gacha-input" type="text" id="gachaCodeInput" placeholder="Kode promo kamu..." maxlength="20">
+          <div style="display:flex;gap:8px;width:100%">
+            <button class="btn-secondary" style="flex:1;justify-content:center" onclick="verifyGachaCode()"><i class="fas fa-search"></i> Verifikasi</button>
+            <button class="btn-primary" style="flex:1;justify-content:center" id="gachaSpinBtn" disabled onclick="doSpin()"><i class="fas fa-dice"></i> Spin!</button>
+          </div>
+          <div class="gacha-result-text" id="gachaResult">Masukkan kode promo untuk mulai</div>
+          <div id="gachaClaimRow" class="gacha-claim-row" style="display:none">
+            <button class="btn-primary" style="flex:1;justify-content:center" onclick="claimGachaPrize()"><i class="fas fa-gift"></i> Klaim Hadiah</button>
+            <button class="btn-secondary" style="flex:1;justify-content:center" onclick="closeModal('gachaModal')"><i class="fas fa-times"></i> Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg"></span></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
