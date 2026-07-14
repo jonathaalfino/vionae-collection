@@ -53,6 +53,10 @@ function buildOrderMessage(statusResponse, statusLabel) {
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method not allowed');
 
+  // Selalu balas 200 ke Midtrans SECEPATNYA, apapun hasil proses internalnya.
+  // Ini best practice resmi dari Midtrans: kalau server kita balas error/non-200,
+  // Midtrans akan terus retry & fitur "Tes URL notifikasi" di dashboard akan gagal,
+  // padahal endpoint-nya sendiri sehat-sehat aja.
   try {
     const statusResponse = await core.transaction.notification(req.body);
     const transactionStatus = statusResponse.transaction_status;
@@ -68,10 +72,12 @@ module.exports = async (req, res) => {
       await sendTelegramNotification(buildOrderMessage(statusResponse, 'MENUNGGU PEMBAYARAN ⏳'));
     }
     // deny/cancel/expire sengaja tidak kirim notif, biar tidak spam.
-
-    res.status(200).send('OK');
   } catch (err) {
-    console.error('[Webhook] Error:', err.message);
-    res.status(500).send('Error processing notification');
+    // Wajar terjadi kalau ini cuma "Tes URL notifikasi" dari dashboard (bukan
+    // transaksi order asli) — order_id-nya nggak beneran ada, jadi verifikasi
+    // ke Midtrans gagal. Ini tidak masalah, log aja, tetap balas 200 di bawah.
+    console.error('[Webhook] Error saat proses notifikasi:', err.message);
   }
+
+  res.status(200).send('OK');
 };
