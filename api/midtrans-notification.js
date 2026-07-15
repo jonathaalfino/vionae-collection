@@ -13,6 +13,9 @@ const core = new midtransClient.CoreApi({
   clientKey: process.env.MIDTRANS_CLIENT_KEY,
 });
 
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
 async function sendTelegramNotification(message) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -35,10 +38,68 @@ async function sendTelegramNotification(message) {
   }
 }
 
-function buildOrderMessage(statusResponse, statusLabel) {
+// Ambil detail lengkap order (termasuk alamat) dari Supabase pakai order_id.
+async function getOrderFromSupabase(orderId) {
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) return null;
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/orders?order_id=eq.${encodeURIComponent(orderId)}&select=*`,
+      {
+        headers: {
+          'apikey': SUPABASE_SERVICE_ROLE_KEY,
+          'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+        },
+      }
+    );
+    const rows = await res.json();
+    return Array.isArray(rows) && rows.length > 0 ? rows[0] : null;
+  } catch (err) {
+    console.error('[Supabase] Error saat ambil order:', err.message);
+    return null;
+  }
+}
+
+// Update status order + payment_type di Supabase.
+async function updateOrderStatus(orderId, status, paymentType) {
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) return;
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/orders?order_id=eq.${encodeURIComponent(orderId)}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_SERVICE_ROLE_KEY,
+        'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+        'Prefer': 'return=minimal',
+      },
+      body: JSON.stringify({ status, payment_type: paymentType, updated_at: new Date().toISOString() }),
+    });
+  } catch (err) {
+    console.error('[Supabase] Error saat update status:', err.message);
+  }
+}
+
+// Susun pesan Telegram LENGKAP (nama, telepon, alamat, item) kalau data order
+// ketemu di Supabase. Kalau tidak ketemu (misal order lama sebelum fitur ini
+// ada, atau ini cuma "Tes URL notifikasi"), fallback ke info dasar saja.
+function buildOrderMessage(statusResponse, statusLabel, orderRow) {
   const orderId = statusResponse.order_id;
   const gross = Number(statusResponse.gross_amount || 0).toLocaleString('id-ID');
   const payType = statusResponse.payment_type || '-';
+
+  if (!orderRow) {
+    return (
+      `🌸 *PESANAN ${statusLabel}*\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `🆔 Order ID: \`${orderId}\`\n` +
+      `🏦 Metode: ${payType}\n` +
+      `💰 Total: Rp ${gross}\n\n` +
+      `⚠️ Detail pelanggan tidak ditemukan di database.`
+    );
+  }
+
+  const itemLines = (orderRow.items || [])
+    .map((it) => `• ${it.name} x${it.quantity || it.qty || 1}`)
+    .join('\n') || '-';
 
   return (
     `🌸 *PESANAN ${statusLabel}*\n` +
@@ -46,7 +107,13 @@ function buildOrderMessage(statusResponse, statusLabel) {
     `🆔 Order ID: \`${orderId}\`\n` +
     `🏦 Metode: ${payType}\n` +
     `💰 Total: Rp ${gross}\n\n` +
-    `🔗 Cek detail lengkap di Midtrans Dashboard.`
+    `📦 *Item:*\n${itemLines}\n\n` +
+    `👤 *Data Pengiriman:*\n` +
+    `Nama    : ${orderRow.customer_name || '-'}\n` +
+    `Telepon : ${orderRow.customer_phone || '-'}\n` +
+    `Email   : ${orderRow.customer_email || '-'}\n` +
+    `Alamat  : ${orderRow.customer_address || '-'}, ${orderRow.customer_city || '-'} ${orderRow.customer_postal_code || ''}\n` +
+    (orderRow.customer_note ? `Catatan : ${orderRow.customer_note}\n` : '')
   );
 }
 
@@ -61,17 +128,29 @@ module.exports = async (req, res) => {
     const statusResponse = await core.transaction.notification(req.body);
     const transactionStatus = statusResponse.transaction_status;
     const fraudStatus = statusResponse.fraud_status;
+    const orderId = statusResponse.order_id;
 
-    console.log(`[Webhook] order_id: ${statusResponse.order_id}, status: ${transactionStatus}, fraud: ${fraudStatus}`);
+    console.log(`[Webhook] order_id: ${orderId}, status: ${transactionStatus}, fraud: ${fraudStatus}`);
+
+    const orderRow = await getOrderFromSupabase(orderId);
 
     if (transactionStatus === 'capture' && fraudStatus === 'accept') {
-      await sendTelegramNotification(buildOrderMessage(statusResponse, 'BERHASIL ✅'));
+      await updateOrderStatus(orderId, 'paid', statusResponse.payment_type);
+      await sendTelegramNotification(buildOrderMessage(statusResponse, 'BERHASIL ✅', orderRow));
     } else if (transactionStatus === 'settlement') {
-      await sendTelegramNotification(buildOrderMessage(statusResponse, 'BERHASIL ✅'));
+      await updateOrderStatus(orderId, 'paid', statusResponse.payment_type);
+      await sendTelegramNotification(buildOrderMessage(statusResponse, 'BERHASIL ✅', orderRow));
     } else if (transactionStatus === 'pending') {
-      await sendTelegramNotification(buildOrderMessage(statusResponse, 'MENUNGGU PEMBAYARAN ⏳'));
+      await updateOrderStatus(orderId, 'pending', statusResponse.payment_type);
+      await sendTelegramNotification(buildOrderMessage(statusResponse, 'MENUNGGU PEMBAYARAN ⏳', orderRow));
+    } else if (
+      transactionStatus === 'deny' ||
+      transactionStatus === 'cancel' ||
+      transactionStatus === 'expire'
+    ) {
+      await updateOrderStatus(orderId, 'failed', statusResponse.payment_type);
+      // Sengaja tidak kirim notif Telegram untuk status gagal/batal, biar tidak spam.
     }
-    // deny/cancel/expire sengaja tidak kirim notif, biar tidak spam.
   } catch (err) {
     // Wajar terjadi kalau ini cuma "Tes URL notifikasi" dari dashboard (bukan
     // transaksi order asli) — order_id-nya nggak beneran ada, jadi verifikasi
